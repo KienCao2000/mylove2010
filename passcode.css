@@ -1,0 +1,49 @@
+:root { --pink: #f66d8b; --ink: #65414a; --ease-out: cubic-bezier(.23, 1, .32, 1); }
+* { box-sizing: border-box; }
+html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
+body { position: relative; margin: 0; min-height: 100svh; background: #ffedf2; color: var(--ink); font-family: 'Segoe UI', Arial, sans-serif; }
+.gate { position: relative; z-index: 1; display: grid; place-items: center; min-height: 100svh; padding: max(24px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px)); }
+.gate-card { position: relative; width: min(310px, 100%); margin: 0; padding: 34px 36px 48px; border: 0; border-radius: 30px; background: #fffdfd; box-shadow: 0 16px 44px #ee9aac20; text-align: center; transition: transform 260ms var(--ease-out), opacity 260ms var(--ease-out); }
+.gate-card h1 { margin: 0; color: var(--pink); font-family: 'Itim', 'Segoe UI', cursive; font-size: 31px; font-weight: 400; line-height: 1.3; }
+.pin-display { position: relative; width: 150px; height: 36px; margin: 16px auto 20px; border-radius: 12px; }
+.pin-input { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; opacity: 0; font-size: 16px; cursor: text; }
+.pin-display:focus-within { outline: 2px solid #f4acbd; outline-offset: 5px; }
+.pin-dots { display: flex; align-items: center; justify-content: center; gap: 14px; height: 100%; pointer-events: none; }
+.pin-dots span { width: 18px; height: 18px; border: 2px solid #f8b4c5; border-radius: 50%; background: #ffe3ec; transition: background-color 140ms ease, transform 140ms var(--ease-out), box-shadow 140ms ease; }
+.pin-dots span.filled { border-color: var(--pink); background: var(--pink); transform: scale(1.06); box-shadow: 0 0 12px #f66d8b55; }
+.keypad { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.keypad button { display: grid; place-items: center; min-width: 0; min-height: 50px; padding: 8px; border: 1px solid #fae8ee; border-radius: 14px; background: #fff; color: #4c3740; box-shadow: 0 3px 10px #f5cfda20; font: 20px 'Segoe UI', Arial, sans-serif; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; transition: transform 120ms var(--ease-out), background-color 120ms ease; }
+.keypad button:active { transform: scale(.94); background: #ffe7ef; }
+.keypad button:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+.keypad button:disabled { cursor: default; }
+.zero-key { grid-column: 2; }
+.delete-key { grid-column: 3; }
+.gate-status { position: absolute; right: 18px; bottom: 10px; left: 18px; margin: 0; min-height: 28px; display: grid; align-content: center; font-size: 13px; line-height: 1.4; color: #986372; }
+.is-wrong .gate-card { animation: wrong-code 240ms ease-out; }
+.is-wrong .gate-status { color: #c14862; }
+.is-unlocked .gate-card { transform: scale(1.02); }
+.is-unlocked .gate-status { color: #a34262; }
+.is-leaving .gate-card { transform: translateY(-12px); opacity: 0; }
+#unlock-fireworks { position: fixed; z-index: 3; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.petals { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+.petals i { position: absolute; top: -20px; left: var(--x); width: 7px; height: 11px; border-radius: 70% 20% 60% 30%; background: #f58aa5; opacity: 0; animation: petal-fall 13s linear var(--delay) infinite; }
+.petals i:nth-child(1) { --x: 4%; --delay: -3s; }
+.petals i:nth-child(2) { --x: 15%; --delay: -9s; }
+.petals i:nth-child(3) { --x: 25%; --delay: -6s; }
+.petals i:nth-child(4) { --x: 35%; --delay: -12s; }
+.petals i:nth-child(5) { --x: 45%; --delay: -1s; }
+.petals i:nth-child(6) { --x: 55%; --delay: -8s; }
+.petals i:nth-child(7) { --x: 65%; --delay: -4s; }
+.petals i:nth-child(8) { --x: 75%; --delay: -11s; }
+.petals i:nth-child(9) { --x: 85%; --delay: -7s; }
+.petals i:nth-child(10) { --x: 94%; --delay: -2s; }
+.petals i:nth-child(11) { --x: 19%; --delay: -5s; }
+.petals i:nth-child(12) { --x: 80%; --delay: -10s; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.noscript-note { max-width: 280px; font-size: 14px; text-align: center; }
+@media (hover: hover) and (pointer: fine) { .keypad button:not(:disabled):hover { background: #fff0f5; transform: translateY(-2px); } }
+@media (max-width: 360px) { .gate-card { padding-inline: 30px; } .gate-card h1 { font-size: 29px; } }
+@media (max-height: 480px) and (orientation: landscape) { .gate { padding-block: max(16px, env(safe-area-inset-top, 0px)); } .gate-card { padding-block: 20px 40px; } .gate-card h1 { font-size: 26px; } .pin-display { margin-block: 8px 12px; height: 28px; } .keypad { gap: 8px; } .keypad button { min-height: 44px; } }
+@keyframes petal-fall { 0% { opacity: 0; transform: translate3d(0, 0, 0) rotate(0deg); } 10%, 85% { opacity: .45; } 100% { opacity: 0; transform: translate3d(35px, calc(100svh + 40px), 0) rotate(220deg); } }
+@keyframes wrong-code { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+@media (prefers-reduced-motion: reduce) { .petals { display: none; } *, *::before, *::after { animation: none !important; transition: none !important; } .is-unlocked .gate-card { transform: none; } }

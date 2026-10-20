@@ -1,0 +1,40 @@
+:root { --ease-out: cubic-bezier(.23, 1, .32, 1); --ease-in-out: cubic-bezier(.77, 0, .175, 1); }
+* { box-sizing: border-box; }
+html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-height: 100svh; background: #fff0f3; color: #855166; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; transition: opacity 300ms var(--ease-out); }
+.reel-viewport { position: fixed; inset: 0; overflow: hidden; mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 86%, transparent); }
+.reel-track { position: absolute; top: 0; left: 50%; width: min(640px, calc(100% - 48px)); display: flex; flex-direction: column; gap: clamp(32px, 6svh, 56px); padding: 20px 0; animation: memories-rise var(--reel-duration, 34s) linear both; }
+.reel-card { flex: none; width: clamp(180px, 56vw, 280px); max-width: 100%; align-self: flex-start; margin: 0; padding: 8px 8px 15px; border-radius: 3px; background: #fffdf9; box-shadow: 0 8px 28px #a4657a18; transform: rotate(var(--card-angle)); animation: memory-sway 6s var(--ease-in-out) infinite alternate; }
+.reel-card:nth-child(even) { align-self: flex-end; animation-delay: -3s; }
+.reel-card:nth-child(3n) { animation-duration: 7.5s; }
+.reel-card img, .reel-card video { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; background: #f5e2e7; }
+.reel-card figcaption { padding-top: 12px; color: #88556a; font-size: 15px; line-height: 1.4; text-align: center; }
+.reel-controls { position: fixed; z-index: 2; bottom: max(20px, env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); display: grid; justify-items: center; gap: 14px; width: max-content; max-width: calc(100% - 28px); }
+.reel-progress { display: flex; gap: 7px; }
+.reel-progress span { width: 5px; height: 5px; background: #deb7c4; border-radius: 50%; }
+.reel-progress span.seen { background: #ad5879; }
+.reel-actions { display: flex; gap: 6px; }
+.reel-actions button { min-height: 44px; padding: 10px 12px; border: 0; border-radius: 24px; background: #fff9f9; color: #96566b; font: 13px 'Segoe UI', sans-serif; cursor: pointer; touch-action: manipulation; user-select: none; transition: transform 140ms var(--ease-out), background-color 140ms ease; }
+.reel-actions button:active { transform: scale(.96); }
+.reel-actions button:focus-visible { outline: 3px solid #bd708b; outline-offset: 4px; }
+.is-paused .reel-track, .is-paused .reel-card, .is-paused .falling-flower, .is-paused .falling-flower svg { animation-play-state: paused; }
+.falling-flowers { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+.falling-flower { position: absolute; top: -50px; left: var(--flower-left); width: var(--flower-size); opacity: 0; animation: flower-fall var(--fall-duration) var(--fall-delay) linear infinite; }
+.falling-flower svg { display: block; width: 100%; animation: flower-twirl 7.5s linear infinite; }
+@keyframes flower-fall { 0% { transform: translate3d(-12px, 0, 0); opacity: 0; } 8% { opacity: .65; } 50% { transform: translate3d(22px, 55dvh, 0); opacity: .65; } 95% { opacity: .5; } 100% { transform: translate3d(-8px, calc(100dvh + 70px), 0); opacity: 0; } }
+@keyframes flower-twirl { to { transform: rotate(360deg); } }
+@keyframes memory-sway { from { transform: translate3d(-5px, 0, 0) rotate(var(--card-angle)); } to { transform: translate3d(5px, -6px, 0) rotate(calc(var(--card-angle) * -.5)); } }
+.is-leaving { opacity: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes memories-rise { from { transform: translate3d(-50%, 100dvh, 0); } to { transform: translate3d(-50%, -100%, 0); } }
+@media (hover: hover) and (pointer: fine) { .reel-actions button:hover { background: #f8dfe8; } }
+@media (max-width: 600px) { .reel-card figcaption { font-size: 13px; } }
+@media (max-height: 480px) and (orientation: landscape) { .reel-track { width: min(440px, calc(100% - 280px)); left: 40%; } .reel-card { width: 180px; } .reel-controls { left: auto; right: 20px; transform: none; } .reel-actions { flex-direction: column; } }
+@media (prefers-reduced-motion: reduce) {
+ body { overflow-y: auto; transition: none; }
+ .reel-viewport { position: relative; overflow: visible; mask-image: none; }
+ .reel-track { position: relative; left: auto; margin: 24px auto 130px; animation: none; transform: none; gap: 28px; }
+ .pause-reel { display: none; }
+ .reel-card { animation: none; }
+ .falling-flowers { display: none; }
+}

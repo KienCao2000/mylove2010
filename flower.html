@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <script src="access.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="flower.css">
+    <link rel="stylesheet" href="greeting.css">
+    <link rel="stylesheet" href="garden-motion.css">
+    <link rel="stylesheet" href="memories-video.css">
+    <meta name="theme-color" content="#ffeef8">
+    <meta name="color-scheme" content="light">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <title>Một lời chúc dành cho em · 20/10</title>
+</head>
+<body>
+    <div class="romantic-glow"></div>
+    
+    <!-- Hiệu ứng bạch nguyệt quang bên trái -->
+    <div class="moonlight-effect moonlight-left">
+      <div class="moonlight-glow moonlight-glow-1"></div>
+      <div class="moonlight-glow moonlight-glow-2"></div>
+      <div class="moonlight-glow moonlight-glow-3"></div>
+      <div class="moonlight-sparkle moonlight-sparkle-1"></div>
+      <div class="moonlight-sparkle moonlight-sparkle-2"></div>
+      <div class="moonlight-sparkle moonlight-sparkle-3"></div>
+        </div>
+    
+    <!-- Hiệu ứng bạch nguyệt quang bên phải -->
+    <div class="moonlight-effect moonlight-right">
+      <div class="moonlight-glow moonlight-glow-1"></div>
+      <div class="moonlight-glow moonlight-glow-2"></div>
+      <div class="moonlight-glow moonlight-glow-3"></div>
+      <div class="moonlight-sparkle moonlight-sparkle-1"></div>
+      <div class="moonlight-sparkle moonlight-sparkle-2"></div>
+      <div class="moonlight-sparkle moonlight-sparkle-3"></div>
+    </div>
+
+    <main class="greeting-scene" aria-label="Lời chúc ngày Phụ nữ Việt Nam">
+      <header class="greeting-heading">
+        <h1>Một chút thương, gửi em</h1>
+        <p>Chạm vào từng video để nhận lời chúc nhé.</p>
+      </header>
+
+      <div class="memory-video video-one">
+        <button class="video-card" data-greeting="left" aria-label="Xem video em và hoa, cùng lời chúc" aria-haspopup="dialog" aria-controls="greeting-dialog">
+          <video src="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em1.mp4" poster="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em1-poster.jpg" width="720" height="720" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <span>Em và hoa</span>
+        </button>
+      </div>
+
+      <section class="letter-station" aria-label="Phong thư dành cho em">
+        <button class="envelope-button" data-greeting="letter" aria-label="Mở thư chúc mừng ngày 20 tháng 10" aria-haspopup="dialog" aria-controls="greeting-dialog">
+          <span class="envelope-art" aria-hidden="true">
+            <span class="mail-back"></span>
+            <span class="mail-card">
+              <span class="mail-card-title">Happy<br>Women's<br>Day</span>
+              <span class="mail-card-date">20 · 10</span>
+            </span>
+            <span class="mail-fold-right"></span>
+            <span class="mail-fold-left"></span>
+            <span class="mail-hearts"><i>♥</i><i>♥</i><i>♥</i><i>♥</i><i>♥</i></span>
+          </span>
+          <span class="mail-shadow" aria-hidden="true"></span>
+        </button>
+        <button class="letter-action" data-greeting="letter" aria-haspopup="dialog" aria-controls="greeting-dialog">Mở thư gửi em</button>
+        <p class="letter-hint">Một lời chúc, thật nhiều yêu thương.</p>
+      </section>
+
+      <div class="memory-video video-two">
+        <button class="video-card" data-greeting="right" aria-label="Xem video một chút đáng yêu, cùng lời chúc" aria-haspopup="dialog" aria-controls="greeting-dialog">
+          <video src="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em2.mp4" poster="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em2-poster.jpg" width="720" height="720" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <span>Một chút đáng yêu</span>
+        </button>
+      </div>
+      <div class="memory-video video-three">
+        <button class="video-card" data-greeting="third" aria-label="Xem video thương nhớ, cùng lời chúc" aria-haspopup="dialog" aria-controls="greeting-dialog">
+          <video src="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em3.mp4" poster="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em3-poster.jpg" width="720" height="720" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <span>Thương nhớ</span>
+        </button>
+      </div>
+      <div class="memory-video video-four">
+        <button class="video-card" data-greeting="fourth" aria-label="Xem video nụ cười của em, cùng lời chúc" aria-haspopup="dialog" aria-controls="greeting-dialog">
+          <video src="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em4.mp4" poster="https://nestjs-ecommerce-kiendev.s3.ap-southeast-1.amazonaws.com/em4-poster.jpg" width="720" height="720" muted loop playsinline preload="metadata" tabindex="-1" aria-hidden="true"></video>
+          <span>Nụ cười của em</span>
+        </button>
+      </div>
+    </main>
+
+    <dialog id="greeting-dialog" class="greeting-dialog" aria-labelledby="greeting-title" aria-describedby="greeting-message">
+      <div class="dialog-toolbar">
+        <button class="dialog-close" aria-label="Đóng lời chúc" autofocus>×</button>
+      </div>
+      <div class="dialog-content">
+        <video class="dialog-video" controls playsinline loop muted preload="metadata" aria-label="Video kỷ niệm của em" hidden></video>
+        <h2 id="greeting-title"></h2>
+        <button class="reveal-message" type="button" hidden>Chạm để xem hết lời chúc</button>
+        <p id="greeting-message" class="dialog-message"><span class="message-layout" aria-hidden="true"></span><span class="message-typed" aria-hidden="true"></span><span class="message-accessible"></span></p>
+        <p class="dialog-signature">Thương em thật nhiều ♡</p>
+      </div>
+    </dialog>
+
+    <div class="garden-frame" aria-hidden="true">
+    <div class="flowers">
+      <div class="garden-sprout" style="--sprout-delay: 120ms; z-index: 10;">
+<div class="flower flower--1">
+        <div class="flower__leafs flower__leafs--1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+  
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+  
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+          <div class="flower__line__leaf flower__line__leaf--5"></div>
+          <div class="flower__line__leaf flower__line__leaf--6"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa chính giữa 1 -->
+        <div class="growing-grass grass--center-1">
+          <div class="flower__grass flower__grass--center-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 200ms; z-index: 10;">
+<div class="flower flower--2">
+        <div class="flower__leafs flower__leafs--2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+  
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+  
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa chính giữa 2 -->
+        <div class="growing-grass grass--center-2">
+          <div class="flower__grass flower__grass--center-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 280ms; z-index: 10;">
+<div class="flower flower--3">
+        <div class="flower__leafs flower__leafs--3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+  
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+  
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+          <div class="flower__line__leaf flower__line__leaf--4"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa chính giữa 3 -->
+        <div class="growing-grass grass--center-3">
+          <div class="flower__grass flower__grass--center-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+      </div>
+      </div>
+
+      <!-- Thêm bụi hoa bên trái -->
+      <div class="garden-sprout" style="--sprout-delay: 310ms; z-index: 10;">
+<div class="flower flower--left-1">
+        <div class="flower__leafs flower__leafs--left-1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-1 -->
+        <div class="growing-grass grass--left-1-small">
+          <div class="flower__grass flower__grass--left-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa left-1 -->
+        <div class="growing-grass grass--left-1-extra-1">
+          <div class="flower__grass flower__grass--left-1-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-1-extra-2">
+          <div class="flower__grass flower__grass--left-1-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-1-extra-3">
+          <div class="flower__grass flower__grass--left-1-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-1-extra-4">
+          <div class="flower__grass flower__grass--left-1-extra-4">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 380ms; z-index: 10;">
+<div class="flower flower--left-2">
+        <div class="flower__leafs flower__leafs--left-2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-2 -->
+        <div class="growing-grass grass--left-2-small">
+          <div class="flower__grass flower__grass--left-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa left-2 -->
+        <div class="growing-grass grass--left-2-extra-1">
+          <div class="flower__grass flower__grass--left-2-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-2-extra-2">
+          <div class="flower__grass flower__grass--left-2-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-2-extra-3">
+          <div class="flower__grass flower__grass--left-2-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-2-extra-4">
+          <div class="flower__grass flower__grass--left-2-extra-4">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Thêm bụi hoa bên phải -->
+      <div class="garden-sprout" style="--sprout-delay: 310ms; z-index: 10;">
+<div class="flower flower--right-1">
+        <div class="flower__leafs flower__leafs--right-1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-1 -->
+        <div class="growing-grass grass--right-1-small">
+          <div class="flower__grass flower__grass--right-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa right-1 -->
+        <div class="growing-grass grass--right-1-extra-1">
+          <div class="flower__grass flower__grass--right-1-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-1-extra-2">
+          <div class="flower__grass flower__grass--right-1-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-1-extra-3">
+          <div class="flower__grass flower__grass--right-1-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-1-extra-4">
+          <div class="flower__grass flower__grass--right-1-extra-4">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 380ms; z-index: 10;">
+<div class="flower flower--right-2">
+        <div class="flower__leafs flower__leafs--right-2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-2 -->
+        <div class="growing-grass grass--right-2-small">
+          <div class="flower__grass flower__grass--right-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa right-2 -->
+        <div class="growing-grass grass--right-2-extra-1">
+          <div class="flower__grass flower__grass--right-2-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-2-extra-2">
+          <div class="flower__grass flower__grass--right-2-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-2-extra-3">
+          <div class="flower__grass flower__grass--right-2-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-2-extra-4">
+          <div class="flower__grass flower__grass--right-2-extra-4">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Thêm nhiều bụi hoa bên trái -->
+      <div class="garden-sprout" style="--sprout-delay: 450ms; z-index: 10;">
+<div class="flower flower--left-3">
+        <div class="flower__leafs flower__leafs--left-3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-3 -->
+        <div class="growing-grass grass--left-3-small">
+          <div class="flower__grass flower__grass--left-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa left-3 -->
+        <div class="growing-grass grass--left-3-extra-1">
+          <div class="flower__grass flower__grass--left-3-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-3-extra-2">
+          <div class="flower__grass flower__grass--left-3-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-3-extra-3">
+          <div class="flower__grass flower__grass--left-3-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 520ms; z-index: 10;">
+<div class="flower flower--left-4">
+        <div class="flower__leafs flower__leafs--left-4">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-4 -->
+        <div class="growing-grass grass--left-4-small">
+          <div class="flower__grass flower__grass--left-4">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa left-4 -->
+        <div class="growing-grass grass--left-4-extra-1">
+          <div class="flower__grass flower__grass--left-4-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-4-extra-2">
+          <div class="flower__grass flower__grass--left-4-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-4-extra-3">
+          <div class="flower__grass flower__grass--left-4-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 590ms; z-index: 10;">
+<div class="flower flower--left-5">
+        <div class="flower__leafs flower__leafs--left-5">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-5 -->
+        <div class="growing-grass grass--left-5-small">
+          <div class="flower__grass flower__grass--left-5">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa left-5 -->
+        <div class="growing-grass grass--left-5-extra-1">
+          <div class="flower__grass flower__grass--left-5-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-5-extra-2">
+          <div class="flower__grass flower__grass--left-5-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-5-extra-3">
+          <div class="flower__grass flower__grass--left-5-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Thêm thêm bụi hoa bên trái -->
+      <div class="garden-sprout" style="--sprout-delay: 660ms; z-index: 10;">
+<div class="flower flower--left-6">
+        <div class="flower__leafs flower__leafs--left-6">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-6 -->
+        <div class="growing-grass grass--left-6">
+          <div class="flower__grass flower__grass--left-6">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-6-extra-1">
+          <div class="flower__grass flower__grass--left-6-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-6-extra-2">
+          <div class="flower__grass flower__grass--left-6-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 730ms; z-index: 10;">
+<div class="flower flower--left-7">
+        <div class="flower__leafs flower__leafs--left-7">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-7 -->
+        <div class="growing-grass grass--left-7">
+          <div class="flower__grass flower__grass--left-7">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--left-7-extra-1">
+          <div class="flower__grass flower__grass--left-7-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 800ms; z-index: 10;">
+<div class="flower flower--left-8">
+        <div class="flower__leafs flower__leafs--left-8">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-8 -->
+        <div class="growing-grass grass--left-8">
+          <div class="flower__grass flower__grass--left-8">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bụi hoa left-9 -->
+      <div class="garden-sprout" style="--sprout-delay: 870ms; z-index: 10;">
+<div class="flower flower--left-9">
+        <div class="flower__leafs flower__leafs--left-9">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-9 -->
+        <div class="growing-grass grass--left-9">
+          <div class="flower__grass flower__grass--left-9">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bụi hoa left-10 -->
+      <div class="garden-sprout" style="--sprout-delay: 940ms; z-index: 10;">
+<div class="flower flower--left-10">
+        <div class="flower__leafs flower__leafs--left-10">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-10 -->
+        <div class="growing-grass grass--left-10">
+          <div class="flower__grass flower__grass--left-10">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bụi hoa left-11 -->
+      <div class="garden-sprout" style="--sprout-delay: 1010ms; z-index: 10;">
+<div class="flower flower--left-11">
+        <div class="flower__leafs flower__leafs--left-11">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa left-11 -->
+        <div class="growing-grass grass--left-11">
+          <div class="flower__grass flower__grass--left-11">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Thêm nhiều bụi hoa bên phải -->
+      <div class="garden-sprout" style="--sprout-delay: 450ms; z-index: 10;">
+<div class="flower flower--right-3">
+        <div class="flower__leafs flower__leafs--right-3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-3 -->
+        <div class="growing-grass grass--right-3-small">
+          <div class="flower__grass flower__grass--right-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa right-3 -->
+        <div class="growing-grass grass--right-3-extra-1">
+          <div class="flower__grass flower__grass--right-3-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-3-extra-2">
+          <div class="flower__grass flower__grass--right-3-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-3-extra-3">
+          <div class="flower__grass flower__grass--right-3-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 520ms; z-index: 10;">
+<div class="flower flower--right-4">
+        <div class="flower__leafs flower__leafs--right-4">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-4 -->
+        <div class="growing-grass grass--right-4-small">
+          <div class="flower__grass flower__grass--right-4">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa right-4 -->
+        <div class="growing-grass grass--right-4-extra-1">
+          <div class="flower__grass flower__grass--right-4-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-4-extra-2">
+          <div class="flower__grass flower__grass--right-4-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-4-extra-3">
+          <div class="flower__grass flower__grass--right-4-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 590ms; z-index: 10;">
+<div class="flower flower--right-5">
+        <div class="flower__leafs flower__leafs--right-5">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-5 -->
+        <div class="growing-grass grass--right-5-small">
+          <div class="flower__grass flower__grass--right-5">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <!-- Thêm cây cỏ cho bụi hoa right-5 -->
+        <div class="growing-grass grass--right-5-extra-1">
+          <div class="flower__grass flower__grass--right-5-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-5-extra-2">
+          <div class="flower__grass flower__grass--right-5-extra-2">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-5-extra-3">
+          <div class="flower__grass flower__grass--right-5-extra-3">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Thêm thêm bụi hoa bên phải -->
+      <div class="garden-sprout" style="--sprout-delay: 660ms; z-index: 10;">
+<div class="flower flower--right-6">
+        <div class="flower__leafs flower__leafs--right-6">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-6 -->
+        <div class="growing-grass grass--right-6">
+          <div class="flower__grass flower__grass--right-6">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+        
+        <div class="growing-grass grass--right-6-extra-1">
+          <div class="flower__grass flower__grass--right-6-extra-1">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 730ms; z-index: 10;">
+<div class="flower flower--right-7">
+        <div class="flower__leafs flower__leafs--right-7">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-7 -->
+        <div class="growing-grass grass--right-7">
+          <div class="flower__grass flower__grass--right-7">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 800ms; z-index: 10;">
+<div class="flower flower--right-8">
+        <div class="flower__leafs flower__leafs--right-8">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-8 -->
+        <div class="growing-grass grass--right-8">
+          <div class="flower__grass flower__grass--right-8">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bụi hoa right-9 -->
+      <div class="garden-sprout" style="--sprout-delay: 870ms; z-index: 10;">
+<div class="flower flower--right-9">
+        <div class="flower__leafs flower__leafs--right-9">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-9 -->
+        <div class="growing-grass grass--right-9">
+          <div class="flower__grass flower__grass--right-9">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bụi hoa right-10 -->
+      <div class="garden-sprout" style="--sprout-delay: 940ms; z-index: 10;">
+<div class="flower flower--right-10">
+        <div class="flower__leafs flower__leafs--right-10">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-10 -->
+        <div class="growing-grass grass--right-10">
+          <div class="flower__grass flower__grass--right-10">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Bụi hoa right-11 -->
+      <div class="garden-sprout" style="--sprout-delay: 1010ms; z-index: 10;">
+<div class="flower flower--right-11">
+        <div class="flower__leafs flower__leafs--right-11">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__white-circle"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1"></div>
+          <div class="flower__line__leaf flower__line__leaf--2"></div>
+          <div class="flower__line__leaf flower__line__leaf--3"></div>
+        </div>
+        
+        <!-- Cây cỏ cho bụi hoa right-11 -->
+        <div class="growing-grass grass--right-11">
+          <div class="flower__grass flower__grass--right-11">
+            <div class="flower__grass--top"></div>
+            <div class="flower__grass--bottom"></div>
+            <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+            <div class="flower__grass__overlay"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 150ms; z-index: 0;">
+<div class="grow-ans" style="--d:1.2s">
+        <div class="flower__g-long">
+          <div class="flower__g-long__top"></div>
+          <div class="flower__g-long__bottom"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 220ms; z-index: 0;">
+<div class="growing-grass">
+        <div class="flower__grass flower__grass--1">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 290ms; z-index: 0;">
+<div class="growing-grass">
+        <div class="flower__grass flower__grass--2">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Thêm nhiều cây cỏ xung quanh -->
+      <div class="garden-sprout" style="--sprout-delay: 360ms; z-index: 0;">
+<div class="growing-grass grass--left-1">
+        <div class="flower__grass flower__grass--3">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 430ms; z-index: 0;">
+<div class="growing-grass grass--left-2">
+        <div class="flower__grass flower__grass--4">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 80ms; z-index: 0;">
+<div class="growing-grass grass--right-1">
+        <div class="flower__grass flower__grass--5">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 150ms; z-index: 0;">
+<div class="growing-grass grass--right-2">
+        <div class="flower__grass flower__grass--6">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 220ms; z-index: 0;">
+<div class="growing-grass grass--left-3">
+        <div class="flower__grass flower__grass--7">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="garden-sprout" style="--sprout-delay: 290ms; z-index: 0;">
+<div class="growing-grass grass--right-3">
+        <div class="flower__grass flower__grass--8">
+          <div class="flower__grass--top"></div>
+          <div class="flower__grass--bottom"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+          <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+          <div class="flower__grass__overlay"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 360ms; z-index: 0;">
+<div class="grow-ans" style="--d:2.4s">
+        <div class="flower__g-right flower__g-right--1">
+          <div class="leaf"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 430ms; z-index: 0;">
+<div class="grow-ans" style="--d:2.8s">
+        <div class="flower__g-right flower__g-right--2">
+          <div class="leaf"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 80ms; z-index: 0;">
+<div class="grow-ans" style="--d:2.8s">
+        <div class="flower__g-front">
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
+            <div class="flower__g-front__leaf"></div>
+          </div>
+          <div class="flower__g-front__line"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 150ms; z-index: 0;">
+<div class="grow-ans" style="--d:3.2s">
+        <div class="flower__g-fr">
+          <div class="leaf"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div>
+          <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 220ms; z-index: -1;">
+<div class="long-g long-g--0">
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:2.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 290ms; z-index: -1;">
+<div class="long-g long-g--1">
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.8s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 360ms; z-index: -1;">
+<div class="long-g long-g--2">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.4s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 430ms; z-index: -1;">
+<div class="long-g long-g--3">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 80ms; z-index: -1;">
+<div class="long-g long-g--4">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 150ms; z-index: -1;">
+<div class="long-g long-g--5">
+        <div class="grow-ans" style="--d:4s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 220ms; z-index: 20;">
+<div class="long-g long-g--6">
+        <div class="grow-ans" style="--d:4.2s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.4s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.6s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:4.8s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+  
+      <div class="garden-sprout" style="--sprout-delay: 290ms; z-index: -1;">
+<div class="long-g long-g--7">
+        <div class="grow-ans" style="--d:3s">
+          <div class="leaf leaf--0"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.2s">
+          <div class="leaf leaf--1"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.5s">
+          <div class="leaf leaf--2"></div>
+        </div>
+        <div class="grow-ans" style="--d:3.6s">
+          <div class="leaf leaf--3"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    </div>
+    <script src="greeting.js" defer></script>
+  </body>
+</html>

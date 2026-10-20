@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffedf2">
+    <meta name="color-scheme" content="light">
+    <title>Nhập pass nha · Một món quà dành cho em</title>
+    <link rel="stylesheet" href="passcode.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <script src="effects/firework.js" defer></script>
+    <script src="passcode.js" defer></script>
+</head>
+<body>
+    <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <main class="gate">
+        <form class="gate-card" novalidate aria-labelledby="gate-title">
+            <h1 id="gate-title">Nhập pass nha</h1>
+            <div class="pin-display">
+                <label class="sr-only" for="passcode">Nhập mã gồm 4 chữ số</label>
+                <input id="passcode" class="pin-input" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" autocomplete="off" aria-describedby="gate-status">
+                <div class="pin-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="keypad" aria-label="Bàn phím nhập mã">
+                <button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button>
+                <button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button>
+                <button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button>
+                <button type="button" data-digit="0" class="zero-key">0</button>
+                <button type="button" class="delete-key" aria-label="Xóa một số"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="#793d43" stroke-width="6" stroke-linecap="round"/><path d="m6 6 12 12M18 6 6 18" stroke="#f77b88" stroke-width="3" stroke-linecap="round"/></svg></button>
+            </div>
+            <p id="gate-status" class="gate-status" role="status" aria-live="polite">Một bí mật nhỏ, một món quà xinh.</p>
+        </form>
+        <noscript><p class="noscript-note">Bật JavaScript để nhập mã và mở món quà nhé.</p></noscript>
+    </main>
+    <canvas id="unlock-fireworks" aria-hidden="true"></canvas>
+</body>
+</html>

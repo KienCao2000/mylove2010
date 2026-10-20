@@ -1,0 +1,84 @@
+:root {
+  --garden-ease-out: cubic-bezier(.23, 1, .32, 1);
+  --garden-ease-in-out: cubic-bezier(.77, 0, .175, 1);
+}
+
+/* Keep the original artwork at its final size. Each group enters as one layer,
+   instead of hundreds of leaves restarting and stems changing layout per frame. */
+.garden-frame .flowers *,
+.garden-frame .flowers *::before,
+.garden-frame .flowers *::after {
+  animation: none !important;
+}
+
+.garden-frame .flowers .garden-sprout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform-origin: bottom center;
+  animation:
+    garden-emerge 1800ms var(--garden-ease-out) var(--sprout-delay, 0ms) both,
+    garden-sway var(--sway-duration, 8s) var(--garden-ease-in-out) calc(var(--sprout-delay, 0ms) + 2200ms + var(--sway-offset, 0ms)) infinite !important;
+}
+
+/* Rotate the complete plant from the soil; attached leaves move with the stem.
+   These values are static per group, so no inherited variable changes per frame. */
+.garden-frame .flowers .garden-sprout:nth-child(3n + 1) {
+  --sway-duration: 7s;
+  --sway-angle: 1.2deg;
+}
+.garden-frame .flowers .garden-sprout:nth-child(3n + 2) {
+  --sway-duration: 8500ms;
+  --sway-angle: -.9deg;
+  --sway-offset: 140ms;
+}
+.garden-frame .flowers .garden-sprout:nth-child(3n) {
+  --sway-duration: 9500ms;
+  --sway-angle: 1deg;
+  --sway-offset: 280ms;
+}
+
+.garden-frame .flowers .flower__leafs {
+  transform-origin: bottom center;
+  animation: garden-bloom 1400ms var(--garden-ease-out) calc(var(--sprout-delay, 0ms) + 240ms) both !important;
+}
+
+/* The old cyan glow blurred every flower over a large area. */
+.garden-frame .flowers .flower__leafs::after { display: none; }
+.garden-frame .flowers .flower__light { opacity: 0; }
+
+.garden-frame .flowers :is(.flower--1, .flower--2, .flower--3) :is(.flower__light--1, .flower__light--3, .flower__light--5, .flower__light--7) {
+  animation: garden-pollen 5s linear calc(2600ms + var(--sprout-delay, 0ms) + var(--pollen-phase, 0ms)) infinite both !important;
+}
+.garden-frame .flower__light--3 { --pollen-phase: 1200ms; }
+.garden-frame .flower__light--5 { --pollen-phase: 2400ms; }
+.garden-frame .flower__light--7 { --pollen-phase: 3600ms; }
+
+@keyframes garden-emerge {
+  from { opacity: 0; transform: translate3d(0, 18px, 0) scale(.96); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes garden-bloom {
+  from { opacity: 0; transform: scale(.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes garden-sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(var(--sway-angle, 1deg)); }
+  75% { transform: rotate(calc(-1 * var(--sway-angle, 1deg))); }
+}
+@keyframes garden-pollen {
+  0% { opacity: 0; transform: translate3d(0, 0, 0); }
+  15% { opacity: .8; }
+  80% { opacity: .35; }
+  100% { opacity: 0; transform: translate3d(-2vmin, -12vmin, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .garden-frame .flowers :is(.garden-sprout, .flower__leafs, .flower) {
+    animation: none !important;
+  }
+  .garden-frame .flowers .flower__light { display: none; }
+}

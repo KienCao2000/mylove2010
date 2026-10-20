@@ -1,0 +1,158 @@
+:root {
+  --greeting-ink: #743e49;
+  --greeting-accent: #b24b62;
+  --envelope-back: #f08080;
+  --envelope-right: #f4978e;
+  --envelope-left: #f8ad9d;
+  --letter-paper: #eae2b7;
+  --letter-ink: #003049;
+}
+
+html { height: auto; overflow-x: clip; overflow-y: auto; -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
+body { position: relative; display: block; width: 100%; height: auto; min-height: 100svh; overflow: visible; perspective: none; font-family: 'Poppins', Arial, sans-serif; color: var(--greeting-ink); }
+button { font: inherit; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+button:focus-visible { outline: 3px solid var(--greeting-accent); outline-offset: 6px; }
+.romantic-glow, .moonlight-effect { pointer-events: none; }
+.romantic-glow { position: absolute; inset: 0; width: 100%; height: 100%; transform: none; }
+.garden-frame { position: fixed; inset: 0; z-index: 8; overflow: hidden; pointer-events: none; }
+.flowers { position: absolute; bottom: 0; left: 50%; pointer-events: none; }
+.greeting-scene { position: relative; z-index: 10; width: min(1120px, 100%); height: 100svh; min-height: 760px; margin: auto; }
+.greeting-heading { position: absolute; top: max(38px, env(safe-area-inset-top)); left: 20px; right: 20px; text-align: center; }
+.greeting-heading h1 { font-family: 'Pacifico', cursive; font-weight: 400; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.5; }
+.greeting-heading p { margin-top: 8px; font-size: 14px; }
+.letter-station { position: absolute; top: 28%; left: 50%; width: 300px; transform: translateX(-50%); text-align: center; }
+.envelope-button { position: relative; display: block; width: 100%; aspect-ratio: 1; padding: 0; border: 0; background: transparent; color: var(--letter-ink); }
+.envelope-art { position: absolute; inset: 0 0 8%; animation: letter-float 4s ease-in-out infinite; }
+.mail-back { position: absolute; top: 35%; left: 0; width: 100%; height: 66.67%; background: var(--envelope-back); }
+.mail-back::before { content: ''; position: absolute; width: 70.71%; aspect-ratio: 1; left: 14.64%; top: -52.5%; transform: rotate(45deg); border-radius: 26px 0 0; background: var(--envelope-back); }
+.mail-card { position: absolute; z-index: 1; top: 37%; left: 5%; width: 90%; height: 57%; background: var(--letter-paper); transition: transform 550ms cubic-bezier(.22, 1, .36, 1); }
+.mail-card::before { content: ''; position: absolute; inset: 11px; border: 3px dotted var(--letter-ink); }
+.mail-card-title { position: relative; display: block; margin-top: 12px; font-family: 'Pacifico', cursive; font-size: 21px; line-height: 1.15; }
+.mail-card-date { position: relative; display: block; margin-top: 10px; font-size: 12px; letter-spacing: .12em; }
+.mail-fold-right { position: absolute; z-index: 3; inset: 36.7% 0 -1.67%; background: var(--envelope-right); clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.mail-fold-left { position: absolute; z-index: 4; inset: 36.7% 0 -1.67%; background: var(--envelope-left); clip-path: polygon(0 0, 100% 100%, 0 100%); }
+.mail-shadow { position: absolute; width: 106%; height: 19px; left: -3%; bottom: -5%; border-radius: 50%; background: #795b6140; animation: letter-shadow 4s ease-in-out infinite; }
+.mail-hearts { position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+.mail-hearts i { position: absolute; color: #f53658; font-style: normal; font-size: 24px; animation: mail-heart 3s ease-in-out infinite; }
+.mail-hearts i:nth-child(1) { left: 8%; top: 25%; }
+.mail-hearts i:nth-child(2) { left: 26%; top: 39%; font-size: 17px; animation-delay: -.7s; }
+.mail-hearts i:nth-child(3) { left: 42%; top: 32%; font-size: 20px; animation-delay: -1.5s; }
+.mail-hearts i:nth-child(4) { left: 61%; top: 13%; animation-delay: -2s; }
+.mail-hearts i:nth-child(5) { left: 79%; top: 40%; font-size: 16px; animation-delay: -1s; }
+.letter-action { margin-top: 32px; min-height: 44px; padding: 10px 24px; border: 0; border-radius: 24px; color: #fff; background: var(--greeting-accent); transition: transform 160ms ease-out, background-color 160ms ease-out; }
+.letter-hint { margin-top: 12px; font-size: 13px; }
+.memory-photo { position: absolute; top: 30%; width: clamp(140px, 17vw, 190px); padding: 7px 7px 12px; border: 0; background: #fffaf7; color: var(--greeting-ink); transform: rotate(var(--photo-angle)); transition: transform 220ms ease-out; }
+.memory-photo-left { left: 6%; --photo-angle: -8deg; }
+.memory-photo-right { right: 6%; top: 38%; --photo-angle: 7deg; }
+.memory-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 0; }
+.memory-photo span { display: block; padding-top: 9px; font-size: 13px; }
+.memory-photo:active { transform: rotate(var(--photo-angle)) scale(.96); }
+.letter-action:active, .dialog-close:active { transform: scale(.96); }
+.envelope-button:active .mail-card { transform: translateY(-15%); }
+@media (hover: hover) and (pointer: fine) {
+  .memory-photo:hover { transform: rotate(0) translateY(-7px); }
+  .envelope-button:hover .mail-card { transform: translateY(-28%); }
+  .letter-action:hover { background: #963c51; transform: translateY(-2px); }
+  .dialog-close:hover { background: #f4dce0; }
+}
+.greeting-dialog { position: fixed; inset: max(12px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); margin: auto; width: min(520px, calc(100% - max(16px, env(safe-area-inset-left, 0px)) - max(16px, env(safe-area-inset-right, 0px)))); max-height: calc(100dvh - max(12px, env(safe-area-inset-top, 0px)) - max(12px, env(safe-area-inset-bottom, 0px))); padding: 0; border: 0; border-radius: 18px; background: #fffaf5; color: var(--greeting-ink); overflow-y: auto; overscroll-behavior: contain; }
+.greeting-dialog::backdrop { background: #4a283877; }
+.greeting-dialog[open] { animation: greeting-appear 260ms ease-out; }
+.dialog-toolbar { position: sticky; top: 0; z-index: 2; height: 60px; margin-bottom: -60px; pointer-events: none; }
+.dialog-content { padding: 60px 30px 30px; overflow-wrap: anywhere; }
+.dialog-close { position: absolute; right: 8px; top: 8px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #faeeee; color: var(--greeting-ink); font-size: 27px; pointer-events: auto; transition: transform 160ms ease-out, background-color 160ms ease-out; }
+.dialog-photo { display: block; width: min(210px, 70%); max-height: 260px; object-fit: cover; margin: 0 auto 22px; border-radius: 8px; }
+.dialog-photo[hidden] { display: none; }
+.dialog-content h2 { padding-right: 10px; font-family: 'Pacifico', cursive; font-weight: 400; font-size: 25px; line-height: 1.5; }
+.dialog-message { position: relative; margin-top: 18px; font-size: 16px; line-height: 1.85; white-space: pre-line; }
+.message-layout { display: block; visibility: hidden; }
+.message-typed { position: absolute; inset: 0; }
+.message-accessible { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.reveal-message { display: block; min-height: 44px; margin-top: 8px; padding: 8px 0; border: 0; background: transparent; color: var(--greeting-accent); font-size: 13px; text-align: left; }
+.reveal-message[hidden] { display: none; }
+.greeting-dialog.is-typing .dialog-content { cursor: pointer; }
+.greeting-dialog.is-typing .dialog-signature { visibility: hidden; }
+.greeting-dialog.is-complete .reveal-message { visibility: hidden; pointer-events: none; }
+.dialog-signature { margin-top: 22px; text-align: right; font-family: 'Pacifico', cursive; font-size: 19px; }
+html:has(.greeting-dialog[open]) { overflow: hidden; }
+@keyframes letter-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes letter-shadow { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.88); } }
+@keyframes mail-heart { 0%, 100% { transform: translateY(0); opacity: .75; } 50% { transform: translateY(-16px); opacity: 1; } }
+@keyframes greeting-appear { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (max-width: 640px) {
+  /* Natural rows keep larger text and short phone screens from overlapping. */
+  .greeting-scene {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: 'heading heading' 'photo-left photo-right' 'letter letter';
+    align-content: start;
+    row-gap: clamp(18px, 2.8svh, 26px);
+    height: auto;
+    min-height: 100svh;
+    padding: calc(22px + env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) calc(120px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px));
+  }
+  .greeting-heading { grid-area: heading; position: static; min-width: 0; }
+  .greeting-heading h1 { font-size: clamp(23px, 6.5vw, 28px); }
+  .greeting-heading p { max-width: 32ch; margin: 5px auto 0; font-size: 13px; line-height: 1.5; }
+  .memory-photo { position: relative; top: auto; left: auto; right: auto; justify-self: center; align-self: center; width: clamp(94px, 28vw, 134px); max-width: 100%; padding: 5px 5px 8px; }
+  .memory-photo-left { grid-area: photo-left; --photo-angle: -6deg; }
+  .memory-photo-right { grid-area: photo-right; --photo-angle: 6deg; }
+  .memory-photo span { font-size: 13px; padding-top: 7px; }
+  .letter-station { grid-area: letter; position: static; justify-self: center; min-width: 0; width: clamp(210px, 60vw, 260px); max-width: 100%; margin-top: 22px; transform: none; }
+  .mail-card-title { margin-top: 12px; font-size: 18px; }
+  .mail-card-date { font-size: 13px; margin-top: 7px; }
+  .letter-action { min-height: 48px; margin-top: 25px; }
+  .letter-hint { font-size: 13px; line-height: 1.5; }
+  .flowers { position: absolute; transform: scale(.74); }
+  .garden-frame { position: absolute; top: auto; height: min(380px, 85vw); }
+  .dialog-content { padding: 60px 22px 26px; }
+  .dialog-content h2 { font-size: clamp(21px, 5.8vw, 25px); }
+  .dialog-photo { width: min(200px, 75%); max-height: 240px; }
+  .dialog-message { line-height: 1.75; }
+}
+@media (max-width: 640px) and (max-height: 720px) {
+  .greeting-scene { row-gap: 12px; padding-top: calc(16px + env(safe-area-inset-top, 0px)); padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+  .greeting-heading h1 { font-size: 23px; }
+  .memory-photo { width: clamp(100px, 28vw, 114px); }
+  .letter-station { width: clamp(190px, 55vw, 220px); margin-top: 18px; }
+  .letter-action { margin-top: 22px; }
+  .letter-hint { margin-top: 8px; }
+  .mail-card-title { margin-top: 10px; font-size: 16px; }
+  .flowers { transform: scale(.62); }
+}
+@media (min-width: 540px) and (max-height: 540px) and (orientation: landscape) {
+  .greeting-scene {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 210px) minmax(0, 1fr);
+    grid-template-areas: 'heading heading heading' 'photo-left letter photo-right';
+    align-content: start;
+    align-items: center;
+    gap: 30px 24px;
+    height: auto;
+    min-height: 100svh;
+    padding: calc(14px + env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-right, 0px)) calc(110px + env(safe-area-inset-bottom, 0px)) max(24px, env(safe-area-inset-left, 0px));
+  }
+  .greeting-heading { grid-area: heading; position: static; }
+  .greeting-heading h1 { font-size: 24px; }
+  .greeting-heading p { max-width: none; margin: 4px auto 0; font-size: 13px; line-height: 1.5; }
+  .letter-station { grid-area: letter; position: static; justify-self: center; width: 190px; margin-top: 6px; transform: none; }
+  .memory-photo { position: relative; top: auto; left: auto; right: auto; justify-self: center; width: clamp(95px, 15vw, 130px); }
+  .memory-photo-left { grid-area: photo-left; }
+  .memory-photo-right { grid-area: photo-right; }
+  .mail-card-title { margin-top: 10px; font-size: 16px; }
+  .letter-action { min-height: 48px; margin-top: 22px; }
+  .letter-hint { margin-top: 8px; }
+  .flowers { position: absolute; transform: scale(.42); }
+  .garden-frame { position: absolute; top: auto; height: 100px; }
+}
+@media (min-width: 540px) and (max-height: 360px) and (orientation: landscape) {
+  .greeting-scene { row-gap: 20px; padding-top: calc(10px + env(safe-area-inset-top, 0px)); }
+  .greeting-heading h1 { font-size: 22px; }
+  .letter-station { width: 160px; }
+  .letter-action { margin-top: 18px; padding-inline: 20px; }
+  .mail-card-title { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+  .flowers .flower__g-front .flower__g-front__leaf-wrapper { animation: none !important; }
+}
